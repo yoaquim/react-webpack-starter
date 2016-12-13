@@ -3,7 +3,7 @@ const path  = require('path');
 module.exports = {
     entry: [
         './src/App.js',
-        './less/app.less'
+        './styles/app.less'
     ],
     output: {
         path: './public',
