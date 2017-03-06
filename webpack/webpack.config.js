@@ -6,7 +6,7 @@ module.exports = {
         './styles/app.less'
     ],
     output: {
-        path: './public',
+        path: __dirname + '/public',
         filename: 'app.js'
     },
     devServer: {
@@ -26,7 +26,7 @@ module.exports = {
             },
             {
                 test: /\.less$/,
-                loader: "style!css!autoprefixer!less-loader"
+                loader: "style-loader!css-loader!autoprefixer-loader!less-loader"
             }
         ]
     },
