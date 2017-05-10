@@ -1,4 +1,4 @@
-const path  = require('path');
+const path = require('path');
 
 module.exports = {
     entry: [
@@ -6,7 +6,7 @@ module.exports = {
         './styles/app.less'
     ],
     output: {
-        path: __dirname + '/public',
+        path: path.resolve(__dirname, '../public'),
         filename: 'app.js'
     },
     devServer: {
@@ -19,7 +19,7 @@ module.exports = {
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
-                loader: 'babel',
+                loader: 'babel-loader',
                 query: {
                     presets: ['react', 'es2015', 'stage-2']
                 }
